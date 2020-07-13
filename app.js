@@ -27,11 +27,6 @@ function animateSlides() {
       reverse: false
     })
       .setTween(slideTl)
-      .addIndicators({
-        colorStart: "white",
-        colorTrigger: "white",
-        name: "slide"
-      })
       .addTo(controller);
     //New animation
     const pageTl = gsap.timeline();
@@ -45,12 +40,6 @@ function animateSlides() {
       duration: "100%", //animation lasts for the whole height of the slide
       triggerHook: 0
     })
-      .addIndicators({
-        colorStart: "white",
-        colorTrigger: "white",
-        name: "page",
-        indent: 200
-      })
       .setTween(pageTl)
       .setPin(slide, { pushFollowers: false })
       .addTo(controller);
@@ -176,11 +165,6 @@ function detailAnimation() {
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)
-      .addIndicators({
-        colorStart: "white",
-        colorTrigger: "white",
-        name: "detailScene"
-      })
       .addTo(controller);
   });
 }
